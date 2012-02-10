@@ -68,12 +68,13 @@ We typically use 2 space indents for HTML b/c it gets so wide so quickly.
                         <ul>
                             <li class="account anonymous nomenu logout">
 			    {% if not user.is_authenticated %}
-                <!-- indent inside tags
+                <!-- indent inside django blocks/tags
                      http://mozweb.readthedocs.org/en/latest/coding.html#django -->
 			    <a id="browserid" href="#">Sign In</a>
 			    <form method="POST" action="{% url browserid_verify %}">
 			    {% csrf_token %}
 			    {{ browserid_form.as_p }}
+                  <!-- don't need XML style tag end slash -->
 			    <input type="hidden" name="next" value="{{ request.get_full_path }}" />
 			    </form>
 			    {% else %}

@@ -164,6 +164,7 @@ Mozilla Reps - Edit Profile
                         T
                     </div>
                     <div class="eleven columns">
+                    <!-- would be best to use multiple lines for long tags like this and align attrs -->
                         <input type="text" placeholder="Twitter handle" value="{{ profileform.twitter_account.value }}" name="twitter_account" class="input-text big">
 		        {% if profileform.twitter_account.errors %}
 		          <small class="error">{{ profileform.twitter_account.errors }}</small>
